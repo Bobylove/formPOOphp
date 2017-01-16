@@ -20,6 +20,9 @@
 	<label for="prenom">Prenom</label>
 	<input name="prenom" id="prenom" type="text">
 	<br><br>	
+	<label for="file">Fichier</label>
+	<input name="file"  id="file" type="file">
+	<br><br>
 	<input type="submit" value="CLICK HERE">
 </form>
 <?php 
@@ -30,12 +33,14 @@ class FormInfos {
 	private $_name = "";
 	private $_prenom = "";
 	private $_genre = "";
+	private $_file = "";
 	
-	function __construct($_nom,$_prename,$_gender){
+	function __construct($_nom,$_prename,$_gender,$_fichier){
 
 		$this->_name = $_nom;
 		$this->_prenom = $_prename;
 		$this->_genre = $_gender;
+		$this->_file = $_fichier;
 
 	}
 	public function setGenre(){
@@ -48,6 +53,9 @@ class FormInfos {
 	public function setName(){
 		return $this->_name;
 
+	}
+	public function setFile(){
+		return $this->_file;
 	}
 }
 
